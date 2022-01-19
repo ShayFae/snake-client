@@ -2,7 +2,7 @@ const net = require("net");
 // const connect = require("./client");
 // const connect = require("./client");
 const connect = require("./client");
-// const { setupInput } = require("./input");
+const setupInput = require("./input");
 
 // establishes a connection with the game server
 // const connect = function () {
@@ -43,10 +43,7 @@ const connect = require("./client");
 // };
 
 console.log("Connecting ...");
-
-connect();
-
-// // setupInput();
+setupInput(connect());
 
 
 
