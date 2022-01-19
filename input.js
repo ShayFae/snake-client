@@ -1,5 +1,5 @@
 const net = require("net");
-const connect  = require("./client");
+const { connect }  = require("./client");
 
 const movement = {
   w: "Move: up",
@@ -10,10 +10,10 @@ const movement = {
 
   // const message = {
   //   q: "RUN AWAY",
-  //   e: "Hello",
-  //   z: "THIS IS MY KINGDOM",
-  //   x: "Meow"
-  //   }
+    // e: "Hello",
+    // z: "THIS IS MY KINGDOM",
+    // x: "Meow"
+    // }
 
 let connection;
 
@@ -59,4 +59,4 @@ const handleUserInput = function (key) {
   }
 };
 
-module.exports =  setupInput;
+module.exports =  { setupInput };
