@@ -8,12 +8,13 @@ const movement = {
   d: "Move: right"
   }
 
-  // const message = {
-  //   q: "RUN AWAY",
-    // e: "Hello",
-    // z: "THIS IS MY KINGDOM",
-    // x: "Meow"
-    // }
+  const test = "Say: You need to... "
+  const go = 'RUN!!!'
+  const ruler = "Say: This is my kingdom! "
+  const greet = "Say: Hi :)"
+  // const speach = {
+  //   q: "Say: RUN",
+  //   }
 
 let connection;
 
@@ -29,6 +30,8 @@ const setupInput = function (conn) {
 
 };
 
+
+
 const handleUserInput = function (key) {
   if (key === 'w') {
     connection.write(movement.w);
@@ -42,18 +45,15 @@ const handleUserInput = function (key) {
   if (key === 'd') {
     connection.write(movement.d);
   }
-  // if (key === 'q') {
-  //     connection.write(message.q); 
-  // }
-  // if (key === 'e') {
-  //   connection.write(message.e); 
-  // }
-  // if (key === 'z') {
-  // connection.write(message.z); 
-  // }
-  // if (key === 'x') {
-  // connection.write(message.x); 
-  // }
+  if (key === 'q') {
+    connection.write(test + go); 
+}
+if (key === 'e') {
+    connection.write(ruler); 
+}
+if (key === 'z') {
+    connection.write(greet); 
+}
   if (key === '\u0003') {
     process.exit();
   }
